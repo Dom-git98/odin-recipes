@@ -1,10 +1,16 @@
+html {
+  height: 100%;
+}
+
+
 body {
   font-family: "Permanent Marker", sans-serif;
+  background: red;
+  background: linear-gradient(117deg, rgba(255, 0, 0, 1) 0%, rgba(59, 59, 59, 1) 47%, rgba(0, 0, 0, 1) 100%) no-repeat center/cover;
+  background-attachment: fixed;
+  min-height: 100%;
   margin: 0;
   padding: 0;
-  height: 100vh;
-  background: red;
-  background: linear-gradient(117deg, rgba(255, 0, 0, 1) 0%, rgba(59, 59, 59, 1) 47%, rgba(0, 0, 0, 1) 100%);
 }
 
 header {
@@ -47,4 +53,122 @@ a {
   transition: all 0.3s ease;
 }
 
-/* Pages */
+/* Top Page */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: white;;
+  gap: clamp(10px, 2vw, 20px);
+  width: 70%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.image-box,
+.description {
+  flex: 1 1 clamp(280px, 30%, 400px);
+  box-sizing: border-box;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+
+}
+
+.description h2,
+.description p {
+  margin: 0;
+  text-align: center;
+}
+
+
+.description h2 {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  text-align: center;
+  margin: 0;
+}
+
+.description p {
+  font-size: clamp(1rem, 3vw, 1.75rem);
+  text-align: center;
+  margin: 0;
+}
+
+/* Lower Page */
+
+.container-two {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: white;
+  gap: clamp(10px, 2vw, 20px);
+  margin: 0 auto;
+  width: 70%;
+  max-width: 100%;
+}
+
+.ingredients h2,
+.ingredients p,
+.method h2,
+.method ol {
+  margin: 0;
+  text-align: center;
+}
+
+.ingredients h2,
+.method h2 {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  text-align: center;
+  margin: 0;
+}
+
+.ingredients ul,
+.method ol {
+  font-size: clamp(0.9rem, 2.5vw, 1.25rem);
+  text-align: center;
+  margin: 0 auto;
+  list-style-position: inside;
+}
+
+.method h3 {
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
+  text-align: center;
+  margin: 0;
+}
+
+strong {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+/* Footer Button */
+
+.button-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.button-two a {
+  display: inline-block;
+  border-radius: 12px;
+  border: solid white 2px;
+  padding: 10px;
+  margin-top: 10px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.button-two a:hover {
+  box-shadow: 0 0 10px white;
+  transform: scale(1.25);
+  transition: all 0.3s ease;
+}
